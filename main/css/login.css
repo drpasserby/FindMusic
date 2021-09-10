@@ -1,0 +1,39 @@
+.login-box{
+    margin: 200px auto;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(194, 194, 194);
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgb(70, 70, 70);
+}
+
+.userbox{
+    position: relative;
+    top:50px;
+    left:20%;
+}
+
+.register-bottom{
+    text-decoration: none;
+    color: black;
+    font-size: 6px;
+    margin: auto auto;
+}
+
+.register{
+    background-color: #ececec;
+    display: flex;
+    width: 40px;
+    height: auto;
+    position:relative;
+    top:-20px;
+    left:150px;
+
+    border: 1px solid black;
+}
+
+.register a{
+    display: block;
+}

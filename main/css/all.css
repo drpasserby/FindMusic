@@ -1,0 +1,14 @@
+body{
+    min-width: 960px;
+}
+
+.w{
+    width: 1440px;
+    margin: 0px auto;
+}
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}

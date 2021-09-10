@@ -1,0 +1,102 @@
+.header{
+    width: 100%;
+    height: 40px;
+
+    line-height: 40px;
+    background-color: rgb(194, 194, 194);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+
+.login{
+    width: 60px;
+    height: 30px;
+    margin: 5px auto;
+
+    background-color: azure;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+
+    display: block;
+    float: right;
+}
+
+.login:hover{
+    background-color:rgb(68, 68, 68);
+}
+
+.login a{
+    font-size: 15px;
+    margin: -5px 10px;
+}
+
+.login a:hover{
+    color: white;
+}
+
+
+.header-title{
+    margin: 0px auto;
+    float: left;
+}
+
+
+.main{
+    width:100%;
+    height:500px;
+
+    margin: 10px auto 0px;
+    line-height: 40px;
+    background-color: rgb(194, 194, 194);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px;
+}
+
+.player{
+    height: 500px;
+    padding: 20px;
+}
+
+.player-picture{
+    width: 200px;
+    height: 200px;
+    border: 4px solid black;
+}
+
+.music-name{
+    font-size: 25px;
+    margin:-200px 250px;
+    float: left;
+}
+
+.music-rate{
+    font-size: 15px;
+    margin:-170px 250px;
+    float: left;
+}
+
+.music-con{
+    margin:-120px 250px;
+    float: left;
+}
+
+.footer{
+    width: 100%;
+    height: 25px;
+
+    background-color: rgb(194, 194, 194);
+    box-shadow: 2px 2px 5px;
+    margin: 0px auto 0px;
+
+    position:fixed;
+    bottom:0;
+    left:0;
+
+}
