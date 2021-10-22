@@ -1,16 +1,37 @@
 {
-  "id": "",
-  "name": "",
-  "font_family": "iconfont",
+  "id": "2892083",
+  "name": "FindMusic",
+  "font_family": "findmusic",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
     {
-      "icon_id": "1312005",
+      "icon_id": "16534188",
+      "name": "播放列表管理",
+      "font_class": "playlistMusic",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "7417092",
       "name": "下一首",
       "font_class": "xiayishou",
-      "unicode": "e647",
-      "unicode_decimal": 58951
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11882873",
+      "name": "bg-backward",
+      "font_class": "backward",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "11882904",
+      "name": "bg-forward",
+      "font_class": "forward",
+      "unicode": "e645",
+      "unicode_decimal": 58949
     },
     {
       "icon_id": "2076214",
@@ -36,14 +57,14 @@
     {
       "icon_id": "7592580",
       "name": "24gf-volumeLow",
-      "font_class": "24gf-volumeLow",
+      "font_class": "volumeLow",
       "unicode": "ea11",
       "unicode_decimal": 59921
     },
     {
       "icon_id": "7592581",
       "name": "24gf-volumeHigh",
-      "font_class": "24gf-volumeHigh",
+      "font_class": "volumeHigh",
       "unicode": "ea12",
       "unicode_decimal": 59922
     }
