@@ -82,7 +82,23 @@ a{
     float: left;
 }
 
+.plarerbtn{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin: 20px;
+	border-radius: 16px;
+	background: #ffd6f0;
+	box-shadow:  4px 4px 8px #b89aad,
+	             -4px -4px 8px #ffffff;
+}
+
+.plarerbtn:hover{
+	background: #cff9ff;
+}
+
 .music-con{
+	display: none;
     margin:-120px 250px;
     float: left;
 }
@@ -100,3 +116,4 @@ a{
     left:0;
 
 }
+
