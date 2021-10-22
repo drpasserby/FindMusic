@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>尘音，寻乐！</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./css/index-progress.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-menu w clearfix">
+			
+				<button  class="change-page" id="change-page-one">Defult
+				</button>
+			
+				<button class="change-page" id="change-page-two">Daily
+				</button>
+			
+            <div class="login">
+                <a href="./login/login.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="player w clearfix">
+            <div class="player-picture-box">
+                <img src="../img/001.jpg" width="200" id="player-picture">
+            </div>
+            <div class="music-name">
+                <p id="musicname">This is Music Name</p>
+            </div>
+            <div class="music-rate">
+                <span id="music-now-time">00:00</span>
+				<span>/</span>
+				<span id="music-all-time">00:00</span>
+            </div>
+			
+			
+			<div class="btnbox">
+                <button class="playerbtn" id="nextmusic">
+                    <span class="findmusic icon-shangyishou"></span>
+                </button>
+                <button class="playerbtn" id="playmusic">
+                    <span class="findmusic icon-bofang"></span>
+                </button>
+                <button class="playerbtn" id="beforemusic">
+                    <span class="findmusic icon-xiayishou"></span>
+                </button>
+                <button class="playerbtn" id="volumedown">
+                    <span class="findmusic icon-volumeLow"></span>
+                </button>
+                <button class="playerbtn" id="volumeup">
+                    <span class="findmusic icon-volumeHigh"></span>
+                </button>
+				<button class="playerbtn" id="backward">
+				    <span class="findmusic icon-backward"></span>
+				</button>
+				<button class="playerbtn" id="forward">
+				    <span class="findmusic icon-forward"></span>
+				</button>
+				<button class="playerbtn" id="playerMusicList">
+				    <span class="findmusic icon-playlistMusic"></span>
+					<div class="playermusiclist">
+						<table id="playermusiclistText"></table>
+					</div>
+				</button>
+            </div>
+			
+            
+            <!-这个是测试按钮，正式发布请删除->
+            <button class="playerbtn" id="test">test</button>
+        </div>
+            <div class="songwords">
+                
+            </div>
+			<div class="progress clearfix">
+			
+			</div>
+        </div>
+    </div>
+	
+	
+    <div class="footer">
+
+    </div>
+    <div id="musicbox">
+        <audio controls id="music-player">
+            <source id="musicurl" src="" type="audio/mpeg">
+          </audio>
+    </div>
+	
+	
+	
+	<script src="./js/index.js"></script>  
+	<script src="./js/index-progress.js"></script>  
+</body>
+</html>
