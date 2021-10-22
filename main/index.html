@@ -5,7 +5,9 @@
     <title>尘音，寻乐！</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/all.css"> 
+    <link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./css/index-progress.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
 </head>
 <body>
     <div class="header">
@@ -22,19 +24,36 @@
                 <img src="../img/001.jpg" width="200">
             </div>
             <div class="music-name">
-                <p id="musicname">久保ユリカ,水瀬いのり - 雨だれの歌</p>
+                <p id="musicname">This is Music Name</p>
             </div>
             <div class="music-rate">
                 <span id="music-now-time">00:00</span>
 				<span>/</span>
 				<span id="music-all-time">00:00</span>
             </div>
+			<div class="progress">
+				<div class="progressAll"></div>
+				<div class="progressNow"></div>
+			</div>
 			
-			<button class="plarerbtn" id="nextmusic"><</button>
-			<button class="plarerbtn" id="playmusic">▷</button>
-			<button class="plarerbtn" id="beforemusic">></button>
-			<button class="plarerbtn" id="volumeup">↑</button>
-			<button class="plarerbtn" id="volumedown">↓</button>
+			<div class="btnbox">
+                <button class="plarerbtn" id="nextmusic">
+                    <span class="iconfont icon-shangyishou"></span>
+                </button>
+                <button class="plarerbtn" id="playmusic">
+                    <span class="iconfont icon-bofang"></span>
+                </button>
+                <button class="plarerbtn" id="beforemusic">
+                    <span class="iconfont icon-xiayishou"></span>
+                </button>
+                <button class="plarerbtn" id="volumedown">
+                    <span class="iconfont icon-24gf-volumeLow"></span>
+                </button>
+                <button class="plarerbtn" id="volumeup">
+                    <span class="iconfont icon-24gf-volumeHigh"></span>
+                </button>
+            </div>
+			
             
         </div>
             <div class="songwords">
@@ -47,11 +66,13 @@
     <div class="footer">
 
     </div>
-	<audio controls id="music-player" class="music-con">
-	    <source src="../music/久保ユリカ,水瀬いのり - 雨だれの歌.mp3" type="audio/mpeg">
-	  </audio>
-	<script src="./js/index.js">
-
-	</script>
+    <div id="musicbox">
+        <audio controls id="music-player">
+            <source id="musicurl" src="" type="audio/mpeg">
+          </audio>
+    </div>
+	
+	<script src="./js/index.js"></script>  
+	<script src="./js/index-progress.js"></script>  
 </body>
 </html>
