@@ -73,9 +73,14 @@
 	
 	//三个函数集合
 	function regetMusic(){
-		getmusicName();
+		//获取封面
+		setTimeout(getmusicName,1);
+		//获取总时间
 		getmusicAllTime();
+		//获取现在播放时间
 		getmusicNowTime();
+		//修改音乐封面
+		changePlayerPicture();
 	}
 
 
@@ -105,6 +110,7 @@
 		player.play();
 		//修改播放按钮
 		document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";
+		regetMusic();
 	});
 
 	//下一首
@@ -116,7 +122,8 @@
 		player.load();
 		player.play();
 		//修改播放按钮
-		document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";	
+		document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";
+		regetMusic();
 	});
 
 	//音量增加
@@ -133,5 +140,5 @@
 	
 	
 	window.onload=function(){
-	  setInterval("regetMusic()",1000);
+	  setInterval("getmusicNowTime()",1000);
 	}
