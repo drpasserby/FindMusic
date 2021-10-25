@@ -65,6 +65,11 @@
 		musicname=decodeURI(musicname);
 		document.getElementById("musicname").textContent=musicname;
 	}
+
+	//修改播放器图片（初步）
+	function changePlayerPicture(){
+		document.getElementById("player-picture").src=("../img/"+musicList[i]+".jpg");
+	}
 	
 	//三个函数集合
 	function regetMusic(){
@@ -122,6 +127,8 @@
 	myclickById("volumedown",function(){
 		player.volume-=0.1;
 	});
+	
+	
 	
 	
 	
