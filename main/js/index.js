@@ -8,9 +8,19 @@
 	//临时代码块
 	{
 		//歌单列表
-		var musicList=["久保ユリカ,水瀬いのり - 雨だれの歌","上田麗奈 - リテラチュア","Akie秋绘 - elm"];
+		var musicList=[
+		"久保ユリカ,水瀬いのり - 雨だれの歌",
+		"上田麗奈 - リテラチュア",
+		"Akie秋绘 - elm",
+		"陈致逸,HOYO-MiX - Her Legacy 未曾失落的回忆",
+		"Sound Horizon - 美しきもの"
+		];
 		//默认歌曲
 		var i=0;
+		
+		myclickById("test",function(){
+			alert(musicplayerPictureBox);
+		})
 	}
 
 	//获取播放器，以及播放器音频地址
@@ -28,13 +38,14 @@
 	//获取音乐总时长并修改
 	function getmusicAllTime(){
 		if(player.readyState > 0) 
-		    {
+		    {	
 		        var minutes = parseInt(player.duration / 60, 10);
 		        var seconds = parseInt(player.duration % 60);		     
 		        var musicAllTime=AddZero(minutes) +":"+AddZero(seconds);
-				
+
 				document.getElementById("music-all-time").textContent=musicAllTime;			
 		    }
+			
 	};
 	
 	
@@ -48,6 +59,7 @@
 				
 				document.getElementById("music-now-time").textContent=musicNowTime;			
 		    }
+		
 	};
 	
 	//补充分数和秒数前面的0
@@ -89,14 +101,13 @@
 		if(player.paused==true){
 			player.play();
 			//修改播放按钮
-			document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";
+			document.getElementById("playmusic").firstElementChild.classList="findmusic icon-zanting";
 		}
 		else if(player.paused==false){
 			player.pause();
 			//修改播放按钮
-			document.getElementById("playmusic").firstElementChild.classList="iconfont icon-bofang";
+			document.getElementById("playmusic").firstElementChild.classList="findmusic icon-bofang";
 		}
-		regetMusic();
 	});
 	
 
@@ -109,8 +120,9 @@
 		player.load();
 		player.play();
 		//修改播放按钮
-		document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";
-		regetMusic();
+		document.getElementById("playmusic").firstElementChild.classList="findmusic icon-zanting";
+		//封面回正
+		round=0;
 	});
 
 	//下一首
@@ -122,8 +134,9 @@
 		player.load();
 		player.play();
 		//修改播放按钮
-		document.getElementById("playmusic").firstElementChild.classList="iconfont icon-zanting";
-		regetMusic();
+		document.getElementById("playmusic").firstElementChild.classList="findmusic icon-zanting";
+		//封面回正
+		round=0;
 	});
 
 	//音量增加
@@ -136,9 +149,53 @@
 	});
 	
 	
+	//后退5秒
+	myclickById("backward",function(){
+		player.currentTime-=5;
+	});
 	
+	//前进5秒
+	myclickById("forward",function(){
+		player.currentTime+=5;
+	});
 	
+	//获取播放列表
+	var playerlistText=document.getElementById("playermusiclistText");
+	playerlistText.style.height=((musicList.length)*25+"px");
+	for(var j=0;j<musicList.length;j++)
+	{	
+		var tr=document.createElement("tr");
+		tr.innerHTML=((musicList[j].substring(musicList[j].lastIndexOf("-")+1,musicList[j].length))+"\n");
+		playerlistText.appendChild(tr);
+	}
+	
+	// 显示/隐藏播放列表
+	myclickById("playerMusicList",function(){
+		if(playerlistText.parentElement.style.display!="block"){
+			playerlistText.parentElement.style.display="block";
+		}
+		else
+		{
+			playerlistText.parentElement.style.display="none";
+		}
+		
+	})
+	
+	//歌曲封面旋转
+	var round=0;
+	var musicplayerPictureBox=document.getElementById("player-picture").parentElement;
+	function pictureRotate(){
+		if(player.paused==false){
+			if(round>=359)
+			round=0;
+			else{
+				musicplayerPictureBox.style.transform=("rotate("+round+"deg)");
+				round+=0.1;
+			}
+		}	
+	}
 	
 	window.onload=function(){
-	  setInterval("getmusicNowTime()",1000);
+	  setInterval("regetMusic()",100);
+	  setInterval("pictureRotate()",5);
 	}

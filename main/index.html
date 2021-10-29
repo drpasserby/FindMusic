@@ -12,6 +12,13 @@
 <body>
     <div class="header">
         <div class="header-menu w clearfix">
+			
+				<button  class="change-page" id="change-page-one">Daily
+				</button>
+			
+				<button class="change-page" id="change-page-two">Defult
+				</button>
+			
             <div class="login">
                 <a href="./login/login.html">Login</a>
             </div>
@@ -31,27 +38,36 @@
 				<span>/</span>
 				<span id="music-all-time">00:00</span>
             </div>
-			<div class="progress">
-				<div class="progressAll"></div>
-				<div class="progressNow"></div>
-			</div>
+			
 			
 			<div class="btnbox">
                 <button class="playerbtn" id="nextmusic">
-                    <span class="iconfont icon-shangyishou"></span>
+                    <span class="findmusic icon-shangyishou"></span>
                 </button>
                 <button class="playerbtn" id="playmusic">
-                    <span class="iconfont icon-bofang"></span>
+                    <span class="findmusic icon-bofang"></span>
                 </button>
                 <button class="playerbtn" id="beforemusic">
-                    <span class="iconfont icon-xiayishou"></span>
+                    <span class="findmusic icon-xiayishou"></span>
                 </button>
                 <button class="playerbtn" id="volumedown">
-                    <span class="iconfont icon-24gf-volumeLow"></span>
+                    <span class="findmusic icon-volumeLow"></span>
                 </button>
                 <button class="playerbtn" id="volumeup">
-                    <span class="iconfont icon-24gf-volumeHigh"></span>
+                    <span class="findmusic icon-volumeHigh"></span>
                 </button>
+				<button class="playerbtn" id="backward">
+				    <span class="findmusic icon-backward"></span>
+				</button>
+				<button class="playerbtn" id="forward">
+				    <span class="findmusic icon-forward"></span>
+				</button>
+				<button class="playerbtn" id="playerMusicList">
+				    <span class="findmusic icon-playlistMusic"></span>
+					<div class="playermusiclist">
+						<table id="playermusiclistText"></table>
+					</div>
+				</button>
             </div>
 			
             
@@ -61,6 +77,9 @@
             <div class="songwords">
                 
             </div>
+			<div class="progress clearfix">
+			
+			</div>
         </div>
     </div>
 	
@@ -73,6 +92,8 @@
             <source id="musicurl" src="" type="audio/mpeg">
           </audio>
     </div>
+	
+	
 	
 	<script src="./js/index.js"></script>  
 	<script src="./js/index-progress.js"></script>  
