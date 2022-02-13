@@ -1,5 +1,6 @@
-# FindMusic
-## 中文：尘音寻乐
+# 本项目已经弃坑！请知晓！
+## FindMusic
+### 中文：尘音寻乐
 
 >是由DrPasserby提供的在线音乐网页，由基本的HTML5,CSS3,JS编写而成。
 
